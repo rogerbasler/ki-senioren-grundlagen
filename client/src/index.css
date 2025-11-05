@@ -119,6 +119,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 18px;
+    line-height: 1.8;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -130,6 +132,35 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+  
+  /* Grössere Schrift für bessere Lesbarkeit (Barrierefreiheit) */
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Hoher Kontrast für bessere Lesbarkeit */
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  
+  /* Fokus-Indikatoren für Tastaturnavigation */
+  *:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
   }
 }
 
